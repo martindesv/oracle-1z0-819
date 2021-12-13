@@ -3,6 +3,10 @@ package src;
 class Insect {
     protected int numberOfLegs = 4;
     String label = "buggy";
+
+    void method() {
+        new Insect();
+    }
 }
 
 public class Beetle extends Insect {
