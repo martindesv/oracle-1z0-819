@@ -1,9 +1,10 @@
 package src;
 
 public class Jaguar extends BigCat { 
-  public final double size = 1;
+  public final double size;
   public Jaguar() {
-    super.size = 10.2; 
+    size = 10.2;
+    super.size = 5;
   }
 
   public void printDetails() { 
@@ -11,6 +12,9 @@ public class Jaguar extends BigCat {
   }
 
   public static void main(String[] values) {
-    new Jaguar().printDetails();
+    BigCat cat = new Jaguar();
+    Jaguar jaguar = (Jaguar)cat;
+    System.out.println(cat.size);
+    System.out.println(jaguar.size);
   }
 }
