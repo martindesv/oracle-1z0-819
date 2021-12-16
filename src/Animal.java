@@ -1,14 +1,23 @@
 package src;
 
-public class Animal { 
+public class Animal {
   private int age;
   protected String name;
-  
+
   public int getAge() {
-    return age; 
+    return age;
   }
 
-  public void setAge(int newAge) { 
+  public void setAge(int newAge) {
     age = newAge;
+  }
+
+  public Animal(int age) {
+    super(); // Refers to constructor in java.lang.Object
+    this.age = age;
+  }
+
+  public Animal() {
+    super();
   }
 }

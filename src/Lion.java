@@ -6,6 +6,10 @@ public class Lion extends Animal {
     name = n; 
   }
 
+  public Lion() {
+    super(3);
+  }
+
   public void roar() {
     System.out.println(name + ", age " + getAge() + ", says: Roar!");
   }
