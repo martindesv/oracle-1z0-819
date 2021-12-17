@@ -2,8 +2,14 @@ package src;
 
 public class MouseHouse {
     private final int volume;
-    private final String name = "The Mouse House";
+    private final String type;
     {
-        volume = 10;
+        this.volume = 10;
+    }
+    public MouseHouse(String type) {
+        this.type = type;
+    }
+    public MouseHouse() {
+        this("mouse");
     }
 }
