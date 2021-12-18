@@ -1,4 +1,4 @@
-package src;
+package chapter8;
 
 public class Cuttlefish {
   private String name = "swimmy";

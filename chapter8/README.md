@@ -25,3 +25,7 @@ the first line of every constructor is a call to this() or super() , and if omit
 2. Process all instance variable declarations in the order they appear in the class.
 3. Process all instance initializers in the order they appear in the class.
 4. Initialize the constructor including any overloaded constructors referenced with this().
+
+If the first statement of a constructor is not a call to this() or super() , then the compiler will insert a no-argument super() as the first statement of the constructor. (378)
+
+If a class only defines private constructors, then it cannot be extended by a top-level class. (378)

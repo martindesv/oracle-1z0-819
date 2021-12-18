@@ -1,4 +1,4 @@
-package src;
+package chapter8;
 
 class Insect {
     protected int numberOfLegs = 4;

@@ -1,4 +1,4 @@
-package src;
+package chapter8;
 
 class GiraffeFamily {
   static { System.out.print("A"); } 

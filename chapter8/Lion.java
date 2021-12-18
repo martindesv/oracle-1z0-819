@@ -1,4 +1,4 @@
-package src;
+package chapter8;
 
 public class Lion extends Animal {
   public void setProperties(int age, String n) {
