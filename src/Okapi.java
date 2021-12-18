@@ -1,3 +1,5 @@
+package src;
+
 class GiraffeFamily {
   static { System.out.print("A"); } 
   { System.out.print("B"); }
