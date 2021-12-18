@@ -1,4 +1,4 @@
-package chapter8;
+package chapter8.java;
 
 public class Animal {
   private int age;

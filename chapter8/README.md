@@ -29,3 +29,9 @@ the first line of every constructor is a call to this() or super() , and if omit
 If the first statement of a constructor is not a call to this() or super() , then the compiler will insert a no-argument super() as the first statement of the constructor. (378)
 
 If a class only defines private constructors, then it cannot be extended by a top-level class. (378)
+
+you can use this to access visible members of the current or a parent class, and you can use super to access visible members of a parent class (380)
+
+**overriding** a method occurs when a subclass declares a new implementation for an inherited method with the same signature and compatible return type (380)
+
+**method signature** includes the name of the method and method parameters (380)

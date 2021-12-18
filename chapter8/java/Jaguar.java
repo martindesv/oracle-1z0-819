@@ -1,4 +1,4 @@
-package chapter8;
+package chapter8.java;
 
 public class Jaguar extends BigCat { 
   public final double size;

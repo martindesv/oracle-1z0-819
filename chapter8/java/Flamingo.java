@@ -1,4 +1,4 @@
-package chapter8;
+package chapter8.java;
 
 class ParentFlamingo {
   public ParentFlamingo(int num) {

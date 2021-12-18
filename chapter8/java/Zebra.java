@@ -1,4 +1,4 @@
-package chapter8;
+package chapter8.java;
 
 public class Zebra extends Animal {
     public Zebra(int age) {
