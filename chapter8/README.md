@@ -35,3 +35,15 @@ you can use this to access visible members of the current or a parent class, and
 **overriding** a method occurs when a subclass declares a new implementation for an inherited method with the same signature and compatible return type (380)
 
 **method signature** includes the name of the method and method parameters (380)
+
+The compiler performs the following checks when you **override** a method: (381)
+1. The method in the child class must have the same signature as the method in the
+   parent class.
+2. The method in the child class must be at least as accessible as the method in the
+   parent class.
+3. The method in the child class may not declare a checked exception that is new or
+   broader than the class of any exception declared in the parent class method.
+4. If the method returns a value, it must be the same or a subtype of the method in the
+   parent class, known as covariant return types.
+   
+If two methods have the same name but different signatures, the methods are **overloaded**, not overridden. (382)
