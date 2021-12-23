@@ -47,3 +47,6 @@ The compiler performs the following checks when you **override** a method: (381)
    parent class, known as covariant return types.
    
 If two methods have the same name but different signatures, the methods are **overloaded**, not overridden. (382)
+
+Generics: **Return type** of the class or interface declared in the overriding method must be a subtype of the class defined in the parent class.
+The **generic parameter** type must match its parent’s type exactly. (388)
