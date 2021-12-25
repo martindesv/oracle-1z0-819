@@ -45,8 +45,12 @@ The compiler performs the following checks when you **override** a method: (381)
    broader than the class of any exception declared in the parent class method.
 4. If the method returns a value, it must be the same or a subtype of the method in the
    parent class, known as covariant return types.
+5. The method defined in the child class must be marked as static if it is marked as
+   static in a parent class. (389)
    
 If two methods have the same name but different signatures, the methods are **overloaded**, not overridden. (382)
 
 Generics: **Return type** of the class or interface declared in the overriding method must be a subtype of the class defined in the parent class.
 The **generic parameter** type must match its parent’s type exactly. (388)
+
+You can’t override private methods since they are not inherited, the child class can define its own version of the method. (388)
