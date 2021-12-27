@@ -54,3 +54,9 @@ Generics: **Return type** of the class or interface declared in the overriding m
 The **generic parameter** type must match its parent’s type exactly. (388)
 
 You can’t override private methods since they are not inherited, the child class can define its own version of the method. (388)
+
+By marking a method **final**, you forbid a child class from replacing this method. (391)
+
+A **hidden variable** occurs when a child class defines a variable with the same name as an inherited variable defined in the parent class. (392)
+
+overriding a method replaces the parent method on all reference variables (other than super), whereas hiding a method or variable replaces the member only if a child reference type is used (393)
