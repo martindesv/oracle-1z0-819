@@ -60,3 +60,17 @@ By marking a method **final**, you forbid a child class from replacing this meth
 A **hidden variable** occurs when a child class defines a variable with the same name as an inherited variable defined in the parent class. (392)
 
 overriding a method replaces the parent method on all reference variables (other than super), whereas hiding a method or variable replaces the member only if a child reference type is used (393)
+
+**Object vs. Reference** (395)
+
+1. The type of the object determines which properties exist within the object in memory.
+2. The type of the reference to the object determines which methods and variables are accessible to the Java program.
+
+**Casting Objects** (396)
+
+1. Casting a reference from a subtype to a supertype doesn’t require an explicit cast.
+2. Casting a reference from a supertype to a subtype requires an explicit cast.
+3. The compiler disallows casts to an unrelated class.
+4. At runtime, an invalid cast of a reference to an unrelated type results in a ClassCastException being thrown.
+
+**N.B. Revisit.** Even though two classes share a related hierarchy, that doesn’t mean an instance of one can automatically be cast to another. (397)
