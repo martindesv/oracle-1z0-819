@@ -74,3 +74,5 @@ overriding a method replaces the parent method on all reference variables (other
 4. At runtime, an invalid cast of a reference to an unrelated type results in a ClassCastException being thrown.
 
 **N.B. Revisit.** Even though two classes share a related hierarchy, that doesn’t mean an instance of one can automatically be cast to another. (397)
+
+instanceof operator can be used to check whether an object belongs to a particular class or interface and to prevent ClassCastExceptions at runtime
