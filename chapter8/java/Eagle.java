@@ -5,7 +5,7 @@ public class Eagle extends Bird {
         System.out.println("Bird is flying at "+height+" meters");
         return height;
     }
-    public int eat(int food) { // Can't override
+    public int eat(int food) { // Can't override - incompatible return type
         System.out.println("Bird is eating "+food+" units of food");
         return food;
     }

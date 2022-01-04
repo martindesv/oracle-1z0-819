@@ -1,7 +1,7 @@
 package chapter8.java;
 
 public class BactrianCamel extends Camel {
-    private int getNumberOfHumps() { // DOES NOT COMPILE
+    public int getNumberOfHumps() { // DOES NOT COMPILE - weaker access privileges
         return 2;
     }
 }

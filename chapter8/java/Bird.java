@@ -4,13 +4,13 @@ public class Bird {
     public void fly() {
         System.out.println("Bird is flying");
     }
-    public void eat(int food) {
+    private void eat(int food) {
         System.out.println("Bird is eating "+food+" units of food");
     }
 
-    public final boolean hasFeathers() {
+    public boolean hasFeathers() {
         return true; 
     }
     
-    public final static void flyAway() {}
+    public static void flyAway() {}
 }

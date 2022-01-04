@@ -13,7 +13,7 @@ class JavanRhino extends Rhino {
     public String getName() {
         return "javan rhino";
     }
-    public CharSequence getColor() { // DOES NOT COMPILE
+    public String getColor() { // DOES NOT COMPILE - CharSequence
         return "grey";
     }
 }

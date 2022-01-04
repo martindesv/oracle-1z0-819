@@ -75,4 +75,6 @@ overriding a method replaces the parent method on all reference variables (other
 
 **N.B. Revisit.** Even though two classes share a related hierarchy, that doesn’t mean an instance of one can automatically be cast to another. (397)
 
-instanceof operator can be used to check whether an object belongs to a particular class or interface and to prevent ClassCastExceptions at runtime
+instanceof operator can be used to check whether an object belongs to a particular class or interface and to prevent ClassCastExceptions at runtime (397)
+
+**N.B. Revisit.** Static methods get **hidden**, not overriden (400)
