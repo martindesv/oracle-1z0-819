@@ -78,3 +78,5 @@ overriding a method replaces the parent method on all reference variables (other
 instanceof operator can be used to check whether an object belongs to a particular class or interface and to prevent ClassCastExceptions at runtime (397)
 
 **N.B. Revisit.** Static methods get **hidden**, not overriden (400)
+
+variable and method hiding should generally be avoided since it leads to confusing and difficult-to-follow code (403)
