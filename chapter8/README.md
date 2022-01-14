@@ -80,3 +80,7 @@ instanceof operator can be used to check whether an object belongs to a particul
 **N.B. Revisit.** Static methods get **hidden**, not overriden (400)
 
 variable and method hiding should generally be avoided since it leads to confusing and difficult-to-follow code (403)
+
+An object may take on a variety of forms, referred to as polymorphism. (404)
+
+Be able to discern between compiler-time casting errors and those that will not occur until runtime and that throw a ClassCastException. (404)
