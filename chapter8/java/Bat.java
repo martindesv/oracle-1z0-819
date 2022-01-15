@@ -4,7 +4,7 @@ class Mammal {
     String type = "mammal";
 }
 public class Bat extends Mammal {
-    String type = "bat";
+    String type = "bat"; // variable hiding
     public String getType() {
         return super.type + ":" + this.type;
     }
