@@ -1,1 +1,1 @@
-## This repository is intended to keep notes and code examples as I'm reading through the book OCP Oracle Certified Professional Java SE 11 Programmer I Study Guide: Exam 1Z0-815
+## Preparation for Oracle 1Z0-819 exam
