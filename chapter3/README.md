@@ -4,7 +4,7 @@ final class can't be extended.
 
 final method can't be overridden.
 
-Abstract method can't be final, private. Can be protected, package-private, public.
+Abstract method can't be final, private, static. Can be protected, package-private, public.
 
 Interface method can't be final. It can be public or private. No access modifier makes it public.
 
@@ -23,6 +23,14 @@ Class implements interface, extends abstract class. Interface extends interface.
 Class that implements two interfaces that both define a method with same signature needs to override it or code doesn't compile.
 
 Interface must be functional to be used as a lambda. Func. in-face must contain one abstract method.
+
+private non-static interface method may only be accessed from other private or default methods within interface.
+
+Interface variables are implicitly public, static, final.
+
+int Integer = 0; // legal
+
+Integer int = 0; // illegal, all primitives are reserved words
 
 Encapsulation: variables private, methods public.
 
@@ -62,6 +70,18 @@ Abstract class can't be instantiated directly (with "new").
 
 Class can extend only one class. It can implement any number of interfaces - multiple inheritance.
 
+Class can't contain two methods with same signature, even if one is static.
+
+Overriding method is not required to throw same checked exception. If it does declare checked exception, it can't be new or broader. It can declare new unchecked exception.
+
 Comments: single-line (//), multiline (/* \*/), Javadoc(/** **/).
 
-\*u*
+If enum contains more than values, then (;) must follow values.
+
+First line of constructor could be this() or super()
+
+Enum method can be abstract. Then every enum value must include an override of this abstract method.
+
+private and static interface methods are not inherited. Methods can't be final. default and abstract methods are inherited by implementing classes.
+
+var var = "s"; // legal
