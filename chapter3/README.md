@@ -85,3 +85,61 @@ Enum method can be abstract. Then every enum value must include an override of t
 private and static interface methods are not inherited. Methods can't be final. default and abstract methods are inherited by implementing classes.
 
 var var = "s"; // legal
+
+Interface method with a body must be explicitly marked static, default, or private.
+
+int num = 3.0; // illegal
+
+int size = 5L; // illegal
+
+Can't use void method in print();
+
+Local class can access final or eff. final local variables. Local variables can't be marked static or private.
+
+Compiler will prevent cycles within overloaded constructors. It doesn't do so for methods.
+
+var can't be null at initialization. It can be assigned null later.
+
+Constructor can't have both this() and super()
+
+Top-level classes can only be public and package-private.
+
+Both top-level and inner classes can be final or abstract.
+
+float is promoted to double before Float. + operator promotes all byte and short to int. byte is promoted to short.
+
+It is possible to extend an abstract class, local class. But not an enum, anonymous class.
+
+Enum constructors are implicitly private.
+
+A static method can't override a non-static method and vice versa.
+
+Concrete class is not allowed abstract methods. Abstract class can have a constructor, but an interface can't.
+
+Member inner classes can only include static variables if those static variables are marked final.
+
+Anonymous class can implement a single interface. Lambda can implement a functional interface.
+
+When main starts running, first the top-level class is loaded.
+
+Class variable == static variable.
+
+1) static blocks
+2) instance blocks 
+3) constructor
+
+Object methods: equals(Object); toString();
+
+You can change call(String[] arg) to call(String... arg) without error.
+
+Instance initializer block can use static or non-static variables.
+
+Interfaces can't contain protected methods.
+
+ordinal() value can't be used in case statements when switch takes enum value.
+
+Only interfaces and abstract classes can include abstract methods.
+
+final class can't be used as supertype of anonymous class.
+
+Only constructors can call super().
