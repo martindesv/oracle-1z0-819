@@ -49,3 +49,58 @@ On a DoubleStream average() and max() return OptionalDouble.
 BiPredicate takes two generic arguments and returns a boolean. DoubleUnaryOperator and IntUnaryOperator transform values of types double and int. ToLongFunction takes a generic argument and returns long.
 
 ObjDoubleConsumer, ObjIntConsumer. Object is abbreviated to Obj in java.util.function
+
+Terminal operation generates nonstream result.
+
+groupingBy() always returns a Map.
+
+You can only operate on a stream once.
+
+IntUnaryOperator is not generic.
+
+Requirements for performing a parallel reduction with collect() method, which takes a Collector argument:
+* Collector argument is marked concurrent.
+* The stream is parallel.
+* The stream or Collector is marked unordered.
+
+BiPredicate takes two generic arguments and returns a boolean. LongFunction takes long and returns generic type. Java only includes primitive functional interfaces that operate on double, int, long.
+
+An accumulator in a serial or parallel reduction should be associative and stateless.
+
+Optional class has isPresent() that doesn't take parameters and returns a boolean. There is also ifPresent() that takes Consumer and runs only if Optional is non-empty.
+
+forEach() requires Consumer. DoubleConsumer doesn't inherit from Consumer.
+
+Three-argument reduce() returns a generic type. One-argument reduce() returns Optional.
+
+BiFunction<Double, Double, Double> and BinaryOperator<Double> both take two Double arguments and return Double. DoubleFunction<Double> takes single double and returns Double.
+
+ConcurrentSkipListSet - a thread-safe collection. There is no two-argument version of collect() withing Stream interface.
+
+Method references can't have operators next to it.
+
+Trying to order and infinite stream results in exception.
+
+peek() executes on each member of the pipeline.
+
+Generic types are not strictly required.
+
+Primitive streams like LongStream declare average() that returns OptionalDouble. This object declares getAsDouble(). Summary statistics classes provide getAverage() that returns double.
+
+DoubleConsumer takes one value - long (?). ObjDoubleConsumer takes two values - generic and double, and returns void.
+
+LongSupplier doesn't take values and returns long.
+
+JVM will fall back to a single-threaded process if all conditions and parallel reduction are not met. If stream is not parallel, groupingByConcurrent can still be applied.
+
+Primitives can't be null.
+
+Stream must return object. Specialized interfaces like IntStream are needed to return primitives. Stream has methods such as of(), iterate(), stream() that return a Stream.
+
+It is bad practice to have peek() that has side effects, like modifying a variable.
+
+UnaryOperator<> has apply(), not accept(). Post-decrement operator (--) returns original value of variable.
+
+Function and UnaryOperator use apply().
+
+String::charAt can be assigned to BiFunction<String, Integer, Character>. It can't be assigned to Function.
