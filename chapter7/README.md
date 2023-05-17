@@ -79,4 +79,28 @@ Info for debugging modules:
 java -m x -p y -show-module-resolution  
 -m and -p are on java command
 
-21
+Provider needs requires for interface. It needs provides, which specifies both interface and implementation.
+
+Locator needs exports, requires, uses. It requires the module it depends on, uses SPI it references.
+
+javac takes -p for module path. There is no -m on javac.
+
+java.base is always in jdeps output.
+
+jmod modes: create, extract, describe, list, hash.
+
+When a module on module path doesn't contain module-info, all packages are exported.
+
+Modules on module path can't access anything from classpath.
+
+java command uses -m and --module to supply module name. jdeps command uses -s and --summary to specify output is limited.
+
+Service doesn't include the implementation.
+
+There can be multiple service providers for a single interface.
+
+Supplied by JDK: java.logging, java.management, java.naming.
+
+All modules on classpath are unnamed.
+
+Legal formats to distribute module: jar, jmod.
