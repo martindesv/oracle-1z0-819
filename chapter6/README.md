@@ -143,7 +143,17 @@ findFirst() is a terminal operation. ifPresent() is not part of the stream pipel
 
 orElseThrow() throws NoSuchElementException when Optional is empty.
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Function name          | Return type | Method name      | Parameters |
+|------------------------|-------------|------------------|------------|
+| Supplier\<T>           | T           | get()            | 0          |
+| Consumer\<T>           | void        | accept(T)        | 1(T)       |
+| BiConsumer\<T>         | void        | accept(T, U)     | 2(T, U)    |
+| Predicate\<T>          | boolean     | test(T)          | 1(T)       |
+| BiPredicate\<T, U>     | boolean     | test(T, U)       | 2(T, U)    |
+| Function\<T, R>        | R           | apply(T)         | 1(T)       |
+| BiFunction\<T, U, R>   | R           | apply(T, U)      | 2(T, U)    |
+| UnaryOperator\<T>      | T           | apply(T)         | 1(T)       |
+| BinaryOperator\<T>     | T           | apply(T, T)      | 2(T, T)    |
+| DoubleFunction\<R>     | R           | apply(double)    | 1(double)  |
+| ToDoubleFunction\<T>   | double      | applyAsDouble(T) | 1(T)       |
+| ToIntBiFunction\<T, U> | int         | applyAsInt(T, U) | 2(T, U)    |
