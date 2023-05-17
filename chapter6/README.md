@@ -104,3 +104,46 @@ UnaryOperator<> has apply(), not accept(). Post-decrement operator (--) returns 
 Function and UnaryOperator use apply().
 
 String::charAt can be assigned to BiFunction<String, Integer, Character>. It can't be assigned to Function.
+
+parallelStream() should be applied to Collection<E>.
+
+BiPredicate<String, String> pred = (a, b) -> a.contains(b);
+
+BiPredicate<String, String> pred = String::contains;
+
+var s1 = IntStream.empty();
+
+s1.average().getAsDouble; // throws NoSuchElementException
+
+Collectors.groupingBy() and Collectors.partitioningBy() can turn a stream into a Map. partitioningBy() groups using a Boolean key.
+
+() -> { return 1/0; } // is compatible with IntSupplier. Will throw exception at runtime.
+
+filter() takes Predicate, which requires boolean return type from the lambda or method reference.
+
+generate(), iterate() sources return infite stream. of() returns finite stream. limit() intermediate operation returns finite stream. When gives infite stream, map() keeps it infinite.
+
+Method reference can't be assigned to var.
+
+Consumer<Object> c1 = ArrayList::new; and Consumer<Object> c1 = ArrayList::new; // Don't compile because ArrayList and String don't contain constructors that take Object.
+
+Consumer<Object> c2 = System.out::println; // Compiles since system.out.println(Object) exists.
+
+partitioningBy returns a map with two keys, true and false. If no matches, value is empty list.
+
+flatMapToInt() requires a Function with a return value of IntStream, not Stream.
+
+s -> s + 1 matches DoubleUnaryOperator which takes double and return double. Matches Function<String, String>. Matches IntToLongFunction, since int can be implicitly cast to long. Doesn't match UnaryOperator, since (+) is not defined on Object. s -> s would match UnaryOperator.
+
+Applying forEachOrdered() to a parallel stream forces the terminal operation to be performed in a single-threaded manner. Intermediate operations can still use parallel processing, since forEachOrdered() is only applied at the end of the pipeline.
+
+IntSummaryStatistics
+
+findFirst() is a terminal operation. ifPresent() is not part of the stream pipeline. It is a method on Optional.
+
+orElseThrow() throws NoSuchElementException when Optional is empty.
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |

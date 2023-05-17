@@ -1,5 +1,7 @@
 package chapter3;
 
+import java.util.function.Consumer;
+
 class Base {
     void testMethod() throws Exception {}
 }
