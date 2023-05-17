@@ -157,3 +157,37 @@ orElseThrow() throws NoSuchElementException when Optional is empty.
 | DoubleFunction\<R>     | R           | apply(double)    | 1(double)  |
 | ToDoubleFunction\<T>   | double      | applyAsDouble(T) | 1(T)       |
 | ToIntBiFunction\<T, U> | int         | applyAsInt(T, U) | 2(T, U)    |
+
+To be a parallel reduction, groupByConcurrent() must be used instead of groupingBy().
+
+intValue() can be called on Long.
+
+BooleanSupplier does not involve double, int, or long.
+
+long can't become int without casting. mapToLong() is not available on LongStream.
+
+Stateful lambdas should be avoided on both serial and parallel streams. One way to avoid modifying a List with a stateful lambda is to use a collector that outputs a List.
+
+sorted() takes optional Comparator.
+
+forEach() requires a Consumer.
+
+Comparator returns int, takes two parameters.
+
+IntSummaryStatistics has getCount() that returns long.
+
+anyMatch(), allMatch(), noneMatch() take a Predicate.
+
+final can only be used if type or var is specified.
+
+flatMap() is used to turn a stream of collections into a one-dimensional stream. It doesn't matter if they are different types of Collection.
+
+Predicate passed to removeIf() uses Integer.
+
+IntFunction<Integer> takes int, returns Integer.
+
+Stateful lambdas should be avoided with all streams.
+
+BooleanSupplier and LongSupplier don't have get(). They have getAsBoolean() and getAsLong().
+
+A collector that returns ConcurrentMap requires a BiConsumer in the forEach() method.
